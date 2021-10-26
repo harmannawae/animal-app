@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>ประวัติฝากทั้งหมด</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item *ngFor="let animal of animals" color="non">
+    <ion-avatar slot="start">
+        <img src="assets/icon/cat1.jpg">
+    </ion-avatar>
+    <ion-label>
+      <div>ชื่อ : {{ animal.anm_name }}  ประเภท : {{ animal.p_category }}</div>
+      <div>อายุ : {{ animal.anm_age }} เดือน  สายพันธุ์ : {{ animal.anm_species }}</div>
+      <div>ลักษณะพิเศษ : {{ animal.anm_special_features }}</div>
+      <div>เพศ : {{ animal.anm_gender }} สีลำตัว : {{ animal.anm_color }}</div>
+      <div>อาหารที่ชอบ : {{ animal.anm_favorite_food }}</div>
+      <div>อาหารที่แพ้ : {{ animal.anm_food_allergy }}</div>
+      <div>นิสัยสัตว์เลี้ยง : {{ animal.anm_character }}</div>
+      <div>ความสามารถพิเศษ : {{ animal.anm_talent }}</div>
+      <div>โรคประจำตัว : {{ animal.anm_congenital_disease }}</div>
+      <div>ข้อมูลเพิ่มเติม : {{ animal.anm_more }}</div>
+      <div>วันที่ฝาก {{ animal.anm_deposit_date }}</div>
+      <div>เวลาฝาก {{ animal.anm_Deposit_time }}น.</div>
+      <div>วันที่รับ {{ animal.anm_pick_up_date }}</div>
+      <div>เวลารับ {{ animal.anm_pick_up_time }}น.</div>
+      <div>จำนวนวันในการฝาก {{ animal.anm_day }} วัน</div>
+      <div>ราคารวมค่าฝาก {{ animal.total }} บาท</div>
+    </ion-label>
+  </ion-item>
+</ion-content>

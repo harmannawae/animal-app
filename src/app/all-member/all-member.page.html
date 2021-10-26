@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>รายการสมาชิกทั้งหมด</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="bg">
+  <ion-card class="root" *ngFor="let user of users" color="non">
+      <ion-card-content>
+        <div>ชื่อ {{ user.user_name }} นามสกุล {{ user.user_sname }}</div>
+        <div>วันเกิด {{ user.user_birthday }}</div>
+        <div>ที่อยู่ {{ user.user_address }}</div>
+        <div>เบอร์โทร {{ user.user_phone }}</div>
+        <div>เลขบัตร.ปชช {{ user.user_id_number }}</div>
+      </ion-card-content>
+      <ion-card-content>
+          <ion-buttons slot="end" class="bt">
+              <ion-button color="warning">
+                  <ion-icon slot="icon-only" name="create-outline"></ion-icon>
+              </ion-button>
+              <ion-button color="danger">
+                  <ion-icon slot="icon-only" name="trash-outline"></ion-icon>
+              </ion-button>
+          </ion-buttons>
+      </ion-card-content>
+  </ion-card>
+</ion-content>

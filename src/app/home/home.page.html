@@ -1,0 +1,88 @@
+<ion-header [translucent]="true">
+    <ion-toolbar color="tertiary">
+        <ion-buttons slot="secondary">
+        <ion-button>
+            <ion-icon slot="icon-only" name="notifications-outline"></ion-icon>
+        </ion-button>
+        </ion-buttons>
+        <ion-title>หน้าหลัก</ion-title>
+        <ion-buttons slot="primary">
+        <ion-button (click)="goToProfile()">
+            <ion-icon slot="icon-only" name="person-outline"></ion-icon>
+        </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="texe" [fullscreen]="true">
+    <ion-grid>
+        <ion-row>
+            <ion-col class="menu-item" *ngIf="user_type=='user'">
+                <a routerLink="/member" class="texe">
+                    <img src="assets/icon/add-animal.png">
+                    <div class="texe">ฝากสัตว์เลี้ยง</div>
+                </a>
+            </ion-col>
+            <ion-col class="menu-item" *ngIf="user_type=='user'">
+                <a routerLink="/all-pets" class="texe">
+                    <img src="assets/icon/notebook2.png">
+                    <div class="texe">ประวัติการฝาก</div>
+                </a>
+            </ion-col>
+            <ion-col class="menu-item" *ngIf="user_type=='admin'">
+                <a routerLink="/list" class="texe">
+                    <img src="assets/icon/calendar.png">
+                    <div class="texe">รายการรอฝาก</div>
+                </a>
+            </ion-col>
+            <ion-col class="menu-item" *ngIf="user_type=='admin'">
+                <a routerLink="/all-member" class="texe">
+                    <img src="assets/icon/book.png">
+                    <div class="texe">ข้อมูลสมาชิก</div>
+                </a>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col class="menu-item" *ngIf="user_type=='user'">
+                <a routerLink="/wait" class="texe">
+                    <img src="assets/icon/schedule.png">
+                    <div class="texe">รายการรอฝาก</div>
+                </a>
+            </ion-col>
+            <ion-col class="menu-item" *ngIf="user_type=='user'">
+                <a href="https://www.facebook.com/PAT-HOUSE-106914078443971" class="texe" onclick="window.open('https://www.facebook.com/PAT-HOUSE-106914078443971',
+                '_system', 'location=yes'); return false;">
+                    <img src="assets/icon/camera.png">
+                    <div class="texe">ดูสัตว์เลี้ยง</div>
+                </a>
+            </ion-col>
+            <ion-col class="menu-item" *ngIf="user_type=='admin'">
+                <a routerLink="/all-deposit" class="texe">
+                    <img src="assets/icon/notebook1.png">
+                    <div class="texe">ประวัติการฝาก</div>
+                </a>
+            </ion-col>
+            <ion-col class="menu-item" *ngIf="user_type=='admin'">
+                <a routerLink="/all-animal" class="texe">
+                    <img src="assets/icon/notebook4.png">
+                    <div class="texe">ข้อมูลสัตว์เลี้ยง</div>
+                </a>
+            </ion-col>
+            <ion-col class="menu-item" *ngIf="user_type=='admin'">
+                <a routerLink="/report" class="texe">
+                    <img src="assets/icon/pencil.png">
+                    <div class="texe">รายงานข้อมูล</div>
+                </a>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col class="menu-item" *ngIf="user_type=='user'">
+                <a href="https://calendar.google.com/calendar/u/0/r" class="texe" onclick="window.open('https://calendar.google.com/calendar/u/0/r',
+                '_system', 'location=yes'); return false;">
+                    <img src="assets/icon/calendar3.png">
+                    <div class="texe">ตรวจสอบวันฝาก</div>
+                </a>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

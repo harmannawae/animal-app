@@ -1,0 +1,67 @@
+<ion-header>
+    <ion-toolbar color="tertiary">
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-title>แก้ไขข้อมูลสัตว์</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-item color="non">
+        <ion-label position="floating">ชื่อ</ion-label>
+        <ion-input [(ngModel)]="name" placeholder="placeholder" type="text"></ion-input>
+    </ion-item>
+    <ion-item color="non">
+        <ion-label>ประเภทสัตว์เลี้ยง</ion-label>
+        <ion-select placeholder="โปรดเลือก" [(ngModel)]="category">
+          <ion-select-option value="1">แมว</ion-select-option>
+          <ion-select-option value="2">สุนัข</ion-select-option>
+        </ion-select>
+    </ion-item>
+    <ion-item color="non">
+        <ion-label position="floating">อายุ</ion-label>
+        <ion-input [(ngModel)]="age" placeholder="placeholder" type="number"></ion-input>
+    </ion-item>
+    <ion-item color="non">
+        <ion-label position="floating">สายพันธุ์</ion-label>
+        <ion-input [(ngModel)]="species" placeholder="placeholder" type="text"></ion-input>
+    </ion-item>
+    <ion-item color="non">
+        <ion-label position="floating">ลักษณะพิเศษ</ion-label>
+        <ion-input [(ngModel)]="special_features" placeholder="placeholder" type="text"></ion-input>
+    </ion-item>
+    <ion-item color="non">
+        <ion-label position="floating">เพศ</ion-label>
+        <ion-input [(ngModel)]="gender" placeholder="placeholder" type="text"></ion-input>
+    </ion-item>
+    <ion-item color="non">
+        <ion-label position="floating">สีลำตัว</ion-label>
+        <ion-input [(ngModel)]="color" placeholder="placeholder" type="text"></ion-input>
+    </ion-item>
+    <ion-item color="non">
+        <ion-label position="floating">อาหารที่ชอบ</ion-label>
+        <ion-input [(ngModel)]="favorite_food" placeholder="placeholder" type="text"></ion-input>
+    </ion-item>
+    <ion-item color="non">
+        <ion-label position="floating">อาหารที่แพ้</ion-label>
+        <ion-input [(ngModel)]="food_allergy" placeholder="placeholder" type="text"></ion-input>
+    </ion-item>
+    <ion-item color="non">
+        <ion-label position="floating">นิสัยสัตว์เลี้ยง</ion-label>
+        <ion-input [(ngModel)]="character" placeholder="placeholder" type="text"></ion-input>
+    </ion-item>
+    <ion-item color="non">
+        <ion-label position="floating">ความสามารถพิเศษ</ion-label>
+        <ion-input [(ngModel)]="talent" placeholder="placeholder" type="text"></ion-input>
+    </ion-item>
+    <ion-item color="non">
+        <ion-label position="floating">โรคประจำตัว</ion-label>
+        <ion-input [(ngModel)]="congenital_disease" placeholder="placeholder" type="text"></ion-input>
+    </ion-item>
+    <ion-item color="non">
+        <ion-label position="floating">เพิ่มเติม</ion-label>
+        <ion-input [(ngModel)]="more" placeholder="placeholder" type="text"></ion-input>
+    </ion-item>
+    <ion-button id="btn-save" color="tertiary" expand="block" size="large" (click)="edit()">แก้ไข</ion-button>
+</ion-content>

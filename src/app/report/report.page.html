@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>รายงานข้อมูล</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="bg">
+  <ion-card class="root" *ngFor="let report of reports_user" color="non">
+    <ion-card-content>
+      <div>จำนวนสมาชิกในระบบทั้งหมด : {{ report.report }} คน</div>
+    </ion-card-content>
+  </ion-card>
+  <ion-card class="root" *ngFor="let report of reports_animal" color="non">
+      <ion-card-content>
+        <div>จำนวนสัตว์เลี้ยงที่ลงทะเบียนทั้งหมด : {{ report.report }} ตัว</div>
+      </ion-card-content>
+  </ion-card>
+  <ion-card class="root" *ngFor="let report of reports_animal_deposit" color="non">
+    <ion-card-content>
+      <div>จำนวนการฝากในระบบทั้งหมด : {{ report.report }} ตัว</div>
+    </ion-card-content>
+  </ion-card>
+  <ion-card class="root" *ngFor="let report of reports_wait" color="non">
+    <ion-card-content>
+      <div>จำนวนสัตว์เลี้ยงที่รอฝากทั้งหมด : {{ report.report }} ตัว</div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

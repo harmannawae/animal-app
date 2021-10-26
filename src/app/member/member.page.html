@@ -1,0 +1,47 @@
+<ion-header>
+    <ion-toolbar color="tertiary">
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-title>ฝากสัตว์เลี้ยง</ion-title>
+        <ion-buttons slot="primary">
+            <ion-button color="warning" routerLink="/member-add">
+                <h8>ลงทะเบียนสัตว์</h8>
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card class="root" color="dark" *ngFor="let animal of animals">
+        <img class="img" src="assets/icon/cat1.jpg"/>
+        <ion-card-header>
+          <ion-card-title>ข้อมูลสัตว์เลี้ยง</ion-card-title>
+        </ion-card-header>
+        <ion-card-content class="content" routerLink="/member-show/{{ animal.anm_id }}">
+            <div>ชื่อ : {{ animal.anm_name }}  ประเภท : {{ animal.p_category }}</div>
+            <div>อายุ : {{ animal.anm_age }} เดือน  สายพันธุ์ : {{ animal.anm_species }}</div>
+            <div>ลักษณะพิเศษ : {{ animal.anm_special_features }}</div>
+            <div>เพศ : {{ animal.anm_gender }} สีลำตัว : {{ animal.anm_color }}</div>
+            <div>อาหารที่ชอบ : {{ animal.anm_favorite_food }}</div>
+            <div>อาหารที่แพ้ : {{ animal.anm_food_allergy }}</div>
+            <div>นิสัยสัตว์เลี้ยง : {{ animal.anm_character }}</div>
+            <div>ความสามารถพิเศษ : {{ animal.anm_talent }}</div>
+            <div>โรคประจำตัว : {{ animal.anm_congenital_disease }}</div>
+            <div>ข้อมูลเพิ่มเติม : {{ animal.anm_more }}</div>
+        </ion-card-content>
+        <ion-card-content>
+            <ion-buttons slot="end" class="bt">
+                <ion-button color="tertiary" routerLink="/pet-deposit-page/{{ animal.anm_id }}">
+                    <h2>ฝากสัตว์เลี้ยง</h2>
+                </ion-button>
+                <ion-button color="warning" routerLink="/member-edit/{{ animal.anm_id }}">
+                    <ion-icon slot="icon-only" name="create-outline"></ion-icon>
+                </ion-button>
+                <ion-button color="danger" (click)="del(animal.anm_id)">
+                    <ion-icon slot="icon-only" name="trash-outline"></ion-icon>
+                </ion-button>
+            </ion-buttons>
+        </ion-card-content>
+    </ion-card>
+</ion-content>

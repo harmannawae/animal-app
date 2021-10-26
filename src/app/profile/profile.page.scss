@@ -1,0 +1,18 @@
+ion-content {
+    --background: url(/assets/bg.gif) no-repeat center/cover fixed;
+  }
+
+.image {
+    width: 150px;
+    display: block;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.fullname {
+    text-align: center;
+    font-size: 24px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    line-height: 13px;
+}

@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>สมัครสมาชิก</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-item color="non">
+    <ion-label position="floating">อีเมล</ion-label>
+    <ion-input [(ngModel)]="email"></ion-input>
+</ion-item>
+<ion-item color="non">
+  <ion-label position="floating">รหัสผ่าน</ion-label>
+  <ion-input [(ngModel)]="password"></ion-input>
+</ion-item>
+<ion-item color="non">
+  <ion-label position="floating">ชื่อ</ion-label>
+  <ion-input [(ngModel)]="name"></ion-input>
+</ion-item>
+<ion-item color="non">
+  <ion-label position="floating">นามสกุล</ion-label>
+  <ion-input [(ngModel)]="sname"></ion-input>
+</ion-item>
+<ion-item color="non">
+  <ion-label position="floating">วันเกิด</ion-label>
+  <ion-input [(ngModel)]="birthday"></ion-input>
+</ion-item>
+<ion-item color="non">
+    <ion-label position="floating">ที่อยู่</ion-label>
+    <ion-input [(ngModel)]="address"></ion-input>
+</ion-item>
+<ion-item color="non">
+    <ion-label position="floating">เบอร์โทร</ion-label>
+    <ion-input [(ngModel)]="phone"></ion-input>
+</ion-item>
+<ion-item color="non">
+  <ion-label position="floating">เลขประจำตัวประชาชน</ion-label>
+  <ion-input [(ngModel)]="id_number"></ion-input>
+</ion-item>
+<ion-button id="btn-save" color="tertiary" expand="block" size="large" (click)="save()">บันทึก</ion-button>
+</ion-content>

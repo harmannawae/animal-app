@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>หน้าขอฝาก</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content  class="bg">
+
+<ion-item color="non">
+  <ion-label position="floating">จำนวนวันที่ลูกค้าต้องการฝาก</ion-label>
+  <ion-input [(ngModel)]="day"></ion-input>
+</ion-item>
+  
+<ion-button id="btn-save" color="tertiary" expand="block" size="large" (click)="save()">ตกลงการฝาก</ion-button>
+</ion-content>

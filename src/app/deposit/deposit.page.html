@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>หน้าฝาก</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content  class="bg">
+  <ion-item color="non">
+    <ion-label position="floating">วันที่ฝาก</ion-label>
+    <ion-input [(ngModel)]="deposit_date"></ion-input>
+  </ion-item>
+  <ion-item color="non">
+    <ion-label position="floating">เวลาฝาก</ion-label>
+    <ion-input [(ngModel)]="Deposit_time"></ion-input>
+  </ion-item>
+  <ion-item color="non">
+    <ion-label position="floating">วันที่รับ</ion-label>
+    <ion-input [(ngModel)]="pick_up_date"></ion-input>
+  </ion-item>
+  <ion-item color="non">
+    <ion-label position="floating">เวลารับ</ion-label>
+    <ion-input [(ngModel)]="pick_up_time"></ion-input>
+  </ion-item>
+  <ion-item color="non">
+    <ion-label position="floating">จำนวนวันฝาก</ion-label>
+    <ion-input [(ngModel)]="day"></ion-input>
+  </ion-item>
+  <ion-button id="btn-save" color="warning" expand="block" size="large" (click)="save()">บันทึก</ion-button>
+  </ion-content>

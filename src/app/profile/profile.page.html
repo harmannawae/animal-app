@@ -1,0 +1,25 @@
+<ion-header>
+    <ion-toolbar color="tertiary">
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-title>โปรไฟล์ของฉัน</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card class="root" color="dark">
+        <ion-card-content>
+        <img src="assets/icon/user.png" class="image">
+        <br>
+        <div class="fullname">ชื่อ :{{ user_name }} นามสกุล :{{ user_sname }}</div>
+        <div class="fullname">วันเกิด :{{ user_birthday }}</div>
+        <div class="fullname">ที่อยู่ :{{ user_address }}</div>
+        <div class="fullname">เบอร์โทร :{{ user_phone }}</div>
+        <div class="fullname">เลขบัตร.ปชช :{{ user_id_number }}</div>
+        <br>
+        <br>
+        <ion-button color="danger" expand="block" size="large" (click)="logout()">ออกจากระบบ</ion-button>
+        </ion-card-content>
+    </ion-card>
+</ion-content>

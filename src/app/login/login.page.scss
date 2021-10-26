@@ -1,0 +1,29 @@
+ion-content {
+    --background: url(/assets/login.gif) no-repeat center/cover fixed;
+  }
+
+.item-username {
+    text-align: left;
+    margin-top: 220px;
+    font-size: 20px;
+}
+
+.item-password {
+    text-align: left;
+    font-size: 20px;
+}
+
+.bt-login {
+    --ion-color-: #9cd7e8;
+    margin-left: 164px;
+    margin-top: 100px;
+    text-align: center;
+    width: 85px;
+    display: block;
+}
+
+.bt-register {
+    text-align: center;
+    font-size: 15px;
+    margin-top: 73px;
+}
